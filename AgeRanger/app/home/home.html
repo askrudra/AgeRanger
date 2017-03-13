@@ -1,0 +1,60 @@
+﻿<div class="container" ng-controller="homeController as vm" ng-init="vm.getperson();">
+    <div>
+        <h3>
+            {{vm.caption}}
+        </h3>
+    </div>
+    <div class="form-group">
+        <label for="usr">Search:</label>
+        <input type="text" ng-model="vm.searchPerson" class="form-control" id="usr">
+    </div>
+    <!--<div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>Mary</td>
+                    <td>Moe</td>
+                    <td>23</td>
+                </tr>
+                <tr>
+                    <td>July</td>
+                    <td>Dooley</td>
+                    <td>21</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>-->
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="person in vm.person |filter: vm.searchPerson">
+                    <td>{{person.Id}}</td>
+                    <td>{{person.FirstName}}</td>
+                    <td>{{person.LastName}}</td>
+                    <td>{{person.Age}}</td>
+                    <td>{{person.Description}}</td>
+                    <td><a href="#!/Edit/{{person.FirstName}}" >Edit</a> </td>
+                </tr>                
+            </tbody>
+        </table>
+    </div>
+</div>

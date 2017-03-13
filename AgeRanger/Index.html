@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html id="ng-app" ng-app="appModule" lang="en-NZ">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+</head>
+<body >
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">AgeRanger App</a>
+                </div>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#!/">Home</a></li>
+                <li><a href="#!/Person">Add New Person</a></li>
+                <li><a href="#!/Search">Search Person</a></li>                
+            </ul>
+        </div>
+    </div>
+   
+    <div class="container body-content">
+        <div ng-view></div>
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Age Ranger by Rudra Roy</p>
+        </footer>
+    </div>
+    <script type="text/javascript">
+        var baseUrl = "/";
+        var webApiUrl = "";
+        var initPage = '';
+    </script>
+    <script src="Scripts/jquery-1.10.2.min.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-resource.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-sanitize.min.js"></script>
+    <script src="Scripts/modernizr-2.6.2.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+
+    <script src="app/appModule.js"></script>
+    <script src="app/appRoute.js"></script>
+    <script src="app/home/homeController.js"></script>
+    <script src="app/person/personController.js"></script>
+    <script src="app/search/searchController.js"></script>
+    <script src="app/edit/editController.js"></script>
+
+    <script src="app/services/personServices.js"></script>
+</body>
+</html>

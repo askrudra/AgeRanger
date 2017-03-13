@@ -1,0 +1,19 @@
+﻿<div class="container" ng-controller="editController as vm" ng-init="vm.initPerson()">
+    <h3>{{vm.caption}}</h3>
+
+    <form>
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" ng-model="vm.searchResult[0].FirstName" class="form-control" id="firstName">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" ng-model="vm.searchResult[0].LastName" class="form-control" id="lastName">
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" ng-model="vm.searchResult[0].Age" class="form-control" id="age">
+        </div>
+        <button type="submit" ng-click="vm.savePerson(vm.searchResult[0])" class="btn btn-default">Submit</button>
+    </form>
+</div>

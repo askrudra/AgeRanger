@@ -1,0 +1,1 @@
+﻿angular.module('appModule', ['ngResource', 'ngRoute', 'ngSanitize'])

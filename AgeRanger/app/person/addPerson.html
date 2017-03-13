@@ -1,0 +1,19 @@
+﻿<div class="container" ng-controller="personController as vm">
+    <h3>{{vm.caption}}</h3>
+
+    <form>
+        <div class="form-group">
+            <label for="firstName">First Name:</label>
+            <input type="text" ng-model="vm.person.FirstName" class="form-control" id="firstName">
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" ng-model="vm.person.LastName" class="form-control" id="lastName">
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" ng-model="vm.person.Age" class="form-control" id="age">
+        </div>
+        <button type="submit" ng-click="vm.savePerson(vm.person)" class="btn btn-default">Submit</button>
+    </form>
+</div>
